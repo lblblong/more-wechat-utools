@@ -34,12 +34,22 @@ function openWechat(count) {
   }
 }
 
+const defaultMenus = []
+for (let i = 3; i <= 6; i++) {
+  defaultMenus.push({
+    title: `${i}个`,
+    description: `打开 ${i} 个微信`,
+    count: i,
+  })
+}
+
 window.exports = {
   wxsk: {
     mode: "none",
     args: {
       enter: (action) => {
         openWechat(2)
+        window.utools.outPlugin()
       },
     },
   },
@@ -47,27 +57,21 @@ window.exports = {
     mode: "list",
     args: {
       enter: (action, callbackSetList) => {
-        const result = []
-        for (let i = 3; i <= 6; i++) {
-          result.push({
-            title: `${i}个`,
-            description: `打开 ${i} 个微信`,
-            count: i,
-          })
-        }
-        callbackSetList(result)
+        callbackSetList(defaultMenus)
       },
       search: (action, searchWord, callbackSetList) => {
         const count = Number(searchWord)
-        if (isNaN(count) || count === 0) return
-
-        callbackSetList([
-          {
-            title: `${count}个`,
-            description: `打开 ${count} 个微信`,
-            count: count,
-          },
-        ])
+        if (isNaN(count) || count === 0) {
+          callbackSetList(defaultMenus)
+        } else {
+          callbackSetList([
+            {
+              title: `${count}个`,
+              description: `打开 ${count} 个微信`,
+              count: count,
+            },
+          ])
+        }
       },
       select: (action, it, callbackSetList) => {
         openWechat(it.count)
