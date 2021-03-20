@@ -2,6 +2,7 @@
   "pluginName": "微信多开",
   "description": "微信多开",
   "author": "李北龙",
+  "homepage": "https://github.com/lblblong/more-wechat-utools",
   "preload": "./preload.js",
   "version": "0.0.1",
   "logo": "assets/logo.png",
