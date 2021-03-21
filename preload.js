@@ -11,6 +11,11 @@ function canAccess(file) {
   }
 }
 
+function darwinChromePath() {
+  const chromePath = "/Applications/WeChat.app/Contents/MacOS/WeChat"
+  if (canAccess(chromePath)) return chromePath
+}
+
 function win32WechatPath() {
   const suffix = `${path.sep}Tencent${path.sep}WeChat${path.sep}WeChat.exe`
   const prefixes = [
@@ -22,11 +27,19 @@ function win32WechatPath() {
     const wepath = path.join(prefix, suffix)
     if (canAccess(wepath)) return wepath
   }
+}
+
+let wechatPath
+if (process.platform === "win32") {
+  wechatPath = win32WechatPath()
+} else if (process.platform === "darwin") {
+  wechatPath = darwinChromePath()
+}
+
+if (!wechatPath) {
   window.utools.showNotification("未找到微信启动文件")
   throw Error("未找到微信启动文件")
 }
-
-let wechatPath = win32WechatPath()
 
 function openWechat(count) {
   for (let i = 0; i < count; i++) {
