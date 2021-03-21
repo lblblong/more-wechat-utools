@@ -1,3 +1,7 @@
 #### 微信多开
 
-打开多个微信开始愉快的工作吧~
+在电脑上同时打开多个微信
+
+**Github：**[https://github.com/lblblong/more-wechat-utools](https://github.com/lblblong/more-wechat-utools)
+
+欢迎 start ✨

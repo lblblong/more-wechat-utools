@@ -1,22 +1,22 @@
 {
   "pluginName": "微信多开",
-  "description": "微信多开",
+  "description": "在电脑上同时打开多个微信",
   "author": "李北龙",
   "homepage": "https://github.com/lblblong/more-wechat-utools",
   "preload": "./preload.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "logo": "assets/logo.png",
-  "platform": ["win32"],
+  "platform": ["win32", "darwin"],
   "features": [
     {
       "code": "wxsk",
       "explain": "打开两个微信",
-      "cmds": ["wxsk", "微信双开"]
+      "cmds": ["微信双开", "weixinshuangkai"]
     },
     {
       "code": "wxdk",
       "explain": "打开任意多个微信",
-      "cmds": ["wxdk", "微信多开"]
+      "cmds": ["微信多开", "weixinduokai"]
     }
   ]
 }
