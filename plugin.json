@@ -1,7 +1,7 @@
 {
   "pluginName": "微信多开",
   "description": "在电脑上同时打开多个微信",
-  "author": "李北龙",
+  "author": "lblblong",
   "homepage": "https://github.com/lblblong/more-wechat-utools",
   "preload": "./preload.js",
   "version": "0.0.2",
