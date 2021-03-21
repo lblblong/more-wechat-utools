@@ -11,9 +11,9 @@ function canAccess(file) {
   }
 }
 
-function darwinChromePath() {
-  const chromePath = "/Applications/WeChat.app/Contents/MacOS/WeChat"
-  if (canAccess(chromePath)) return chromePath
+function darwinWeChatPath() {
+  const wepath = "/Applications/WeChat.app/Contents/MacOS/WeChat"
+  if (canAccess(wepath)) return wepath
 }
 
 function win32WechatPath() {
@@ -33,7 +33,7 @@ let wechatPath
 if (process.platform === "win32") {
   wechatPath = win32WechatPath()
 } else if (process.platform === "darwin") {
-  wechatPath = darwinChromePath()
+  wechatPath = darwinWeChatPath()
 }
 
 if (!wechatPath) {
