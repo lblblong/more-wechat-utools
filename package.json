@@ -1,0 +1,15 @@
+{
+  "name": "more-wechat-utools",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:lblblong/more-wechat-utools.git",
+  "author": "libeilong <beilong.li@myoffer.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsc -w -p tsconfig.json",
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "utools-helper": "^1.4.6"
+  }
+}

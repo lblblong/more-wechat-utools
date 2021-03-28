@@ -3,20 +3,35 @@
   "description": "在电脑上同时打开多个微信",
   "author": "lblblong",
   "homepage": "https://github.com/lblblong/more-wechat-utools",
-  "preload": "./preload.js",
-  "version": "0.0.2",
+  "preload": "./dist/preload.js",
+  "version": "1.0.0",
   "logo": "assets/logo.png",
   "platform": ["win32", "darwin"],
   "features": [
     {
       "code": "wxsk",
       "explain": "打开两个微信",
-      "cmds": ["微信双开", "weixinshuangkai"]
+      "cmds": ["微信双开"]
     },
     {
       "code": "wxdk",
       "explain": "打开任意多个微信",
-      "cmds": ["微信多开", "weixinduokai"]
+      "cmds": ["微信多开"]
+    },
+    {
+      "code": "setWechatPath",
+      "explain": "设置微信启动文件",
+      "cmds": [
+        "微信多开启动文件路径设置",
+        {
+          "type": "files",
+          "label": "设置为微信多开的启动文件",
+          "fileType": "file",
+          "match": "/(wechat)/i",
+          "minLength": 1,
+          "maxLength": 1
+        }
+      ]
     }
   ]
 }
