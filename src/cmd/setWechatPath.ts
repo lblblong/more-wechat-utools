@@ -1,5 +1,5 @@
 import { Plugin } from "utools-helper"
-import { Action, TplFeatureMode } from "utools-helper/@types/utools"
+import { Action, TplFeatureMode } from "utools-helper/dist/template_plugin"
 import { openSelectWechatPathDialog, setWechatPath } from "../wechatPath"
 
 export class SetWechatPath implements Plugin {

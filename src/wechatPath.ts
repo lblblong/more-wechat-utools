@@ -20,7 +20,7 @@ function win32WechatPath() {
 }
 
 function getStorageID() {
-  return utools.getLocalId() + "wechat"
+  return utools.getNativeId() + "wechat"
 }
 
 export function openSelectWechatPathDialog() {
@@ -36,7 +36,7 @@ export function openSelectWechatPathDialog() {
 export function getWechatPath() {
   let wechatPath: string
 
-  const it = utools.db.get<string>(getStorageID())
+  const it = utools.db.get(getStorageID())
   if (it && it.data) {
     wechatPath = it.data
   } else if (process.platform === "win32") {
@@ -64,7 +64,7 @@ export function getWechatPath() {
 }
 
 export function setWechatPath(path: string) {
-  let it = utools.db.get<string>(getStorageID())
+  let it = utools.db.get(getStorageID())
   if (!it) {
     it = {
       _id: getStorageID(),
@@ -74,11 +74,11 @@ export function setWechatPath(path: string) {
     it.data = path
   }
 
-  const { ok, error } = utools.db.put(it)
+  const { ok, message } = utools.db.put(it)
   if (ok) {
     utools.showNotification("设置成功")
   } else {
     utools.showNotification("设置失败")
-    throw Error(error)
+    throw Error(message)
   }
 }

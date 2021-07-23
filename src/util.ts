@@ -12,6 +12,6 @@ export function canAccess(file: string) {
 
 export function open(path: string, startCount: number) {
   for (let i = 0; i < startCount; i++) {
-    utools.shellOpenItem(path)
+    utools.shellOpenPath(path)
   }
 }

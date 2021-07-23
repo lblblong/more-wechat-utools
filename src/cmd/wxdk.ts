@@ -1,5 +1,5 @@
 import { ListItem, Plugin } from "utools-helper"
-import { TplFeatureMode } from "utools-helper/@types/utools"
+import { TplFeatureMode } from "utools-helper/dist/template_plugin"
 import { open } from "../util"
 import { getWechatPath } from "../wechatPath"
 

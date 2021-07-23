@@ -4,12 +4,12 @@
     "sourceMap": false,
     "noImplicitAny": true,
     "module": "commonjs",
-    "target": "ES2018",
+    "target": "es6",
     "experimentalDecorators": true,
     "types": [
-      "utools-helper/@types/utools",
-      "utools-helper/@types/electron",
+      "utools-api-types",
       "@types/node"
     ]
-  }
+  },
+  "exclude": ["node_modules"]
 }
