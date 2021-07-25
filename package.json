@@ -13,6 +13,7 @@
     "utools-helper": "^2.1.0"
   },
   "devDependencies": {
+    "@types/node": "^16.4.2",
     "typescript": "^4.3.5",
     "utools-api-types": "^2.0.6"
   }
