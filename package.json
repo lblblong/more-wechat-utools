@@ -6,8 +6,8 @@
   "author": "libeilong <beilong.li@myoffer.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "rm -rf dist && tsc -w -p tsconfig.json",
-    "build": "rm -rf dist && tsc -p tsconfig.json"
+    "serve": "parcel src/index.ts --out-dir ./build --target node --bundle-node-modules",
+    "build": "rm -rf ./build && parcel build src/index.ts --out-dir ./build --target node --bundle-node-modules --no-source-maps --no-minify"
   },
   "dependencies": {
     "utools-helper": "^2.1.0"

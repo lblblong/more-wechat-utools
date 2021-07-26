@@ -3,7 +3,7 @@
   "description": "在电脑上同时打开多个微信",
   "author": "lblblong",
   "homepage": "https://github.com/lblblong/more-wechat-utools",
-  "preload": "./dist/preload.js",
+  "preload": "./build/index.js",
   "version": "1.0.0",
   "logo": "assets/logo.png",
   "platform": ["win32", "darwin"],
